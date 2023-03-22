@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unity Medical Care</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         #rform {
           font-size: 24px;
@@ -65,7 +65,7 @@
         }
       </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="../js/scipts.js"></script>
     <script>
 		function validateForm() {
 			var name = document.forms["patientForm"]["name"].value;
@@ -99,13 +99,14 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo"><img src="./logo.jpg" alt="UMC logo"></a>
+                <a href="#" class="logo"><img src="../photo/logo.jpg" alt="UMC logo"></a>
                 <ul class="nav-links">
                     <li><a href="#about"><b>About Us</b></a></li>
                     <li><a href="#services"><b>Services</b></a></li>
                     <li><a href="#doctors"><b>Doctors</b></a></li>
                     <li><a href="#contact"><b>Contact Us</b></a></li>
                     <li><a href="#form"><b>Register Now</b></a></li>
+                    <li><a href="./register.html"><b>Registereration</b></a></li>
                 </ul>
                 <div class="hamburger-menu">
                     <div class="bar"></div>
@@ -116,7 +117,7 @@
             <div class="hero-text">
                 <h1>Unity Medical Care</h1>
                 <p>Providing quality healthcare since 2079</p>
-                <a href="#about" class="btn">Learn More</a>
+                <a href="./register.html" class="btn">Register now</a>
             </div>
         </div>
     </header>
@@ -142,31 +143,29 @@
             </div>
         </div>
     </section>
-
+    
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
             <div class="services">
                 <div class="service">
-                    <img src="./cardio.jpg" alt="Service 1">
+                    <img src="../photo/cardio.jpg" alt="Service 1">
                     <h3>Cardiology</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mi vel nulla scelerisque interdum.</p>
-                </div>
+                    <p>Our hospital's cardio service provides a range of diagnostic and treatment options for heart conditions, including ECG, echocardiography, stress testing, and cardiac catheterization. Our experienced cardiologists work closely with our patients to develop individualized care plans and provide ongoing support for heart health.</p></div>
                 <br><br>
                 <div class="service">
-                    <img src="./dermato.jpg" alt="Service 2">
+                    <img src="../photo/dermato.jpg" alt="Service 2">
                     <h3>Dermatology</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mi vel nulla scelerisque interdum.</p>
-                </div><br><br>
+                    <p>Our hospital's dermatology service offers comprehensive skin care, including diagnosis and treatment of skin conditions such as acne, eczema, and psoriasis. Our skilled dermatologists provide services such as skin cancer screening, mole removal, and cosmetic procedures. We also offer personalized skin care recommendations and education to help our patients maintain healthy skin.</p>                </div><br><br>
                 <div class="service">
-                    <img src="./neuro.jpeg" alt="Service 3">
+                    <img src="../photo/neuro.jpeg" alt="Service 3">
                     <h3>Neurology</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mi vel nulla scelerisque interdum.</p>
+                    <p>Our hospital's neuro service offers advanced diagnostic and treatment options for neurological disorders, such as stroke, epilepsy, and multiple sclerosis. Our team of neurologists and neurosurgeons use state-of-the-art technology to provide personalized care, including brain and spine surgery, electroencephalography, and neuro-rehabilitation. We are committed to improving the quality of life for our patients with neurological conditions.</p>
                 </div><br><br>
                 <div class="service">
-                    <img src="./ortho.jpg" alt="Service 4">
+                    <img src="../photo/ortho.jpg" alt="Service 4">
                     <h3>Orthopedics</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mi vel nulla scelerisque interdum.</p>
+                    <p>Our hospital's ortho service provides comprehensive care for musculoskeletal conditions, such as joint pain, fractures, and sports injuries. Our skilled orthopedic surgeons use advanced techniques and technology to offer personalized treatment options, including joint replacement surgery, arthroscopy, and physical therapy. We are dedicated to helping our patients regain mobility and improve their quality of life.</p>
                 </div><br>
             </div>
         </div>
@@ -177,25 +176,35 @@
             <h2>Our Doctors</h2>
             <div class="doctors">
                 <div class="doctor">
-                    <img src="./doc.png" alt="Doctor 1">
+                    <img src="../photo/doc.png" alt="Doctor 1">
                     <h3>Dr. Niruta Bhattarai</h3>
                     <p>Cardiologist</p>
                 </div>
                 <div class="doctor">
-                    <img src="./doc.png" alt="Doctor 2">
+                    <img src="../photo/doc.png" alt="Doctor 2">
                     <h3>Dr. Pranav Adhikari</h3>
                     <p>Dermatologist</p>
                 </div>
                 <div class="doctor">
-                    <img src="./doc.png" alt="Doctor 3">
+                    <img src="../photo/doc.png" alt="Doctor 3">
                     <h3>Dr. Ram Shah</h3>
                     <p>Neurologist</p>
                 </div>
                 <div class="doctor">
-                    <img src="./doc.png" alt="Doctor 4">
+                    <img src="../photo/doc.png" alt="Doctor 4">
                     <h3>Dr. Sarah Subedi</h3>
                     <p>Orthopedist</p>
                 </div>
+                <div class="doctor">
+                    
+                    <h3>Other Doctors</h3>
+                    <ul>
+                        <li>Ram prasad</li>
+                        <li>Hari bahadur</li>
+                        <li>......many more</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -254,14 +263,15 @@
                 </div>
             </div>
 
-            <form action="">
+            <form action="../php/query.php" method="POST">
                 <h2>For any Query </h2>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <textarea placeholder="Message"></textarea>
-                <input type="submit" value="Send">
-            </form>
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Message"></textarea>
+                <input type="submit" name="submit" value="Send">
+              </form>
+              
         </div>
     </section>
     
@@ -269,7 +279,7 @@
     <footer>
         <div class="container">
             <div class="footer-info">
-                <a href="#" class="logo"><img src="./logo.jpg" alt="UMC logo"></a>
+                <a href="#" class="logo"><img src="../photo/logo.jpg" alt="UMC logo"></a>
                 <p><b>About UMC</b><br>
                     UNITY MEDICAL CARE PVT. LTD. (UMC) was founded with the principles of Social equity in health care. UMC is registered and established on 27th of falgun 2079 and is thriving to provide health services in hygienic way as well as modernization in its system. The Hospital is located presently in a centre of Syagja, best suited for providing prompt health services.</p>
             </div>
